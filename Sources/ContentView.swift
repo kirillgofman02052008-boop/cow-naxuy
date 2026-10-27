@@ -63,7 +63,7 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         .preferredColorScheme(.dark)
-        .statusBarHidden(true)
+        .statusBar(hidden: true)
     }
 
     private func cowButton(width: CGFloat, height: CGFloat) -> some View {
