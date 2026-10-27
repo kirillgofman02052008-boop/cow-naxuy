@@ -1,0 +1,49 @@
+name: CowNaxuy
+options:
+  bundleIdPrefix: com.cownaxuy
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: "15.0"
+
+settings:
+  base:
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    SWIFT_VERSION: "5.0"
+
+targets:
+  CowNaxuy:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: cow naxuy
+        CFBundleName: CowNaxuy
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.cownaxuy.app
+        PRODUCT_NAME: CowNaxuy
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        CODE_SIGN_STYLE: Manual
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGN_IDENTITY: ""
+
+schemes:
+  CowNaxuy:
+    build:
+      targets:
+        CowNaxuy: all
+    run:
+      config: Release
+    archive:
+      config: Release
